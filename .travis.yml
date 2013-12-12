@@ -11,6 +11,7 @@ before_install:
   - lein2 bootstrap
 
 script:
+  - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
   - cd clojure/neocons
   - lein test
 
