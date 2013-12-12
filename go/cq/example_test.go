@@ -5,7 +5,8 @@ import (
 )
 
 func TestHelloCypher(t *testing.T) {
-	if HelloCypher() != []string{"JnBrymn", "technige"} {
-		t.Fatal("doesn't match!")
+	res := HelloCypher()
+	if res[0] != "JnBrymn" || res[1] != "technige" {
+		t.Fatal("doesn't match!", res)
 	}
 }
