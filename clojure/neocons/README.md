@@ -1,14 +1,4 @@
-# neocons
+# neocons-example
 
-A Clojure library designed to ... well, that part is up to you.
+An example using neocons to run some Cypher. Project built with lein.
 
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2013 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
