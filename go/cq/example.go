@@ -7,6 +7,8 @@ import (
 	_ "github.com/wfreeman/cq"
 )
 
+func main() {}
+
 func HelloCypher() []string {
 	db, err := sql.Open("neo4j-cypher", "http://localhost:7474")
 	if err != nil {
