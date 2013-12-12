@@ -8,13 +8,19 @@ before_install:
   - wget dist.neo4j.org/neo4j-community-$NEO_VERSION-unix.tar.gz
   - tar -xzf neo4j-community-$NEO_VERSION-unix.tar.gz
   - neo4j-community-$NEO_VERSION/bin/neo4j start
-  - gvm get
-  - gvm install go1.2
-  - gvm use go1.2
 
 script:
+  # start clojure/neocons
   - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
   - cd clojure/neocons
   - lein test
+  # start go/cq
+  - gvm get
+  - gvm install go1.2
+  - gvm use go1.2
+  - export GOPATH=$HOME/gopath:$GOPATH
+  - mkdir -p $HOME/gopath/src/github.com/wfreeman
+  - cp -r $TRAVIS_BUILD_DIR/cq $HOME/gopath/src/github.com/wfreeman/cq
   - cd $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq/
-  - go test
+  - go get -v ./...
+  - go test -v ./...

@@ -18,7 +18,7 @@ func HelloCypher() []string {
      match (n:User)-[:FOLLOWS]->(m:User)
      where n.screenName = {0}
      return m.screenName as friend
-     limit 10
+     order friend
    `)
 	if err != nil {
 		log.Fatal(err)
