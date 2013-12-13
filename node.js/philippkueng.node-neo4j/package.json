@@ -1,9 +1,9 @@
 {
-    "name": "thingdom.node-neo4j-example",
-    "version": "1.1.0",
+    "name": "philippkeung.node-neo4j-example",
+    "version": "2.0.0-RC1",
     "main": "example.js",
     "dependencies": {
-        "neo4j": "~1.1.0"
+        "node-neo4j": "2.0.0-RC1"
     },
     "devDependencies": {
         "mocha": "~1.3"
