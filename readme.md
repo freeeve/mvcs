@@ -18,7 +18,7 @@ driver list - sorted alphabetically by language and then driver name:
 ### go
 [cq](/go/cq/)
 ### node.js
-[thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)
+[thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)  
 [phillipkueng.node-neo4j](/node.js/phillipkueng.node-neo4j/)
 ### python
 [py2neo](/python/py2neo/)
