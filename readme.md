@@ -3,6 +3,8 @@ The goal of this repo is to keep a folder for each language and each Neo4j Cyphe
 
 [![Build Status](https://travis-ci.org/wfreeman/mvcs.png?branch=master)](https://travis-ci.org/wfreeman/mvcs)
 
+I don't profess to be an expert in all of these languages. Please, if you have a more idiomatic hello Cypher test, submit a PR. Ideally, make sure it runs in the .travis.yml as well. If your driver is not here yet, it probably means I haven't gotten to it yet; let me know if you're going to submit a PR because I may already be working on it.
+
 a baby dataset for our hello Cypher query:
 ```
 merge (u:User {screenName:"wefreema"}) 
@@ -18,7 +20,8 @@ driver list - sorted alphabetically by language and then driver name:
 ### go
 [cq](/go/cq/)
 ### node.js
-[thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)
+[philippkueng.node-neo4j](/node.js/philippkueng.node-neo4j/)  
+[thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)  
 ### python
 [py2neo](/python/py2neo/)
 ### scala

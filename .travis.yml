@@ -14,14 +14,14 @@ before_install:
 
 script:
   - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
-  # start clojure/neocons
-  - cd clojure/neocons
-  - lein test
-  # start go/cq
   - gvm get
   - gvm install go1.2
   - gvm use go1.2
   - export GOPATH=$HOME/gopath:$GOPATH
+  # start clojure/neocons
+  - cd clojure/neocons
+  - lein test
+  # start go/cq
   - mkdir -p $HOME/gopath/src/github.com/wfreeman/mvcs/go
   - cp -r $TRAVIS_BUILD_DIR/go/cq $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq
   - cd $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq/
