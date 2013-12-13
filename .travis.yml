@@ -24,6 +24,10 @@ script:
   - cd $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq/
   - go get -v ./...
   - go test -v ./...
+  # start node.js/thingdom.node-neo4j
+  - cd $TRAVIS_BUILD_DIR/node.js/thingdom.node-neo4j/
+  - npm install -d
+  - npm test
   # start scala/anormcypher
   - cd $TRAVIS_BUILD_DIR/scala/anormcypher
   - sbt test
