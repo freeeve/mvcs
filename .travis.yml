@@ -9,6 +9,7 @@ before_install:
   - tar -xzf neo4j-community-$NEO_VERSION-unix.tar.gz
   - neo4j-community-$NEO_VERSION/bin/neo4j start
   - sudo apt-get install python3
+  - sudo apt-get install python3-pip
 
 script:
   - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
