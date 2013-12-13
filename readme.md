@@ -19,7 +19,7 @@ driver list - sorted alphabetically by language and then driver name:
 ### clojure
 [neocons](/clojure/neocons/)
 ### java
-[embedded](/java/embedded/)
+[Neo4j API - embedded](/java/embedded/)
 ### go
 [cq](/go/cq/)
 ### node.js
