@@ -22,9 +22,11 @@ driver list - sorted alphabetically by language and then driver name:
 [Neo4j API - embedded](/java/embedded/)
 ### go
 [cq](/go/cq/)
+### haskell
 ### node.js
 [philippkueng.node-neo4j](/node.js/philippkueng.node-neo4j/)  
 [thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)  
+### perl
 ### python
 [py2neo](/python/py2neo/)
 ### scala
