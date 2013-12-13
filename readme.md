@@ -3,6 +3,8 @@ The goal of this repo is to keep a folder for each language and each Neo4j Cyphe
 
 [![Build Status](https://travis-ci.org/wfreeman/mvcs.png?branch=master)](https://travis-ci.org/wfreeman/mvcs)
 
+I don't profess to be an expert in all of these languages. Please, if you have a more idiomatic hello Cypher test, submit a PR. Ideally, make sure it runs in the .travis.yml as well. 
+
 a baby dataset for our hello Cypher query:
 ```
 merge (u:User {screenName:"wefreema"}) 
