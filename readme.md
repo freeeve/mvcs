@@ -20,6 +20,7 @@ driver list - sorted alphabetically by language and then driver name:
 [neocons](/clojure/neocons/)
 ### java
 [Neo4j API - embedded](/java/embedded/)
+### jruby
 ### go
 [cq](/go/cq/)
 ### haskell
@@ -27,7 +28,9 @@ driver list - sorted alphabetically by language and then driver name:
 [philippkueng.node-neo4j](/node.js/philippkueng.node-neo4j/)  
 [thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)  
 ### perl
+### php
 ### python
 [py2neo](/python/py2neo/)
+### ruby
 ### scala
 [AnormCypher](/scala/anormcypher/)
