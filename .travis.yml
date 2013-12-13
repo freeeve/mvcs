@@ -28,6 +28,10 @@ script:
   - cd $TRAVIS_BUILD_DIR/node.js/thingdom.node-neo4j/
   - npm install -d
   - npm test
+  # start python/py2neo
+  - cd $TRAVIS_BUILD_DIR/python/py2neo/
+  - pip3 install py2neo
+  - python3 example_test.py
   # start scala/anormcypher
   - cd $TRAVIS_BUILD_DIR/scala/anormcypher
   - sbt test
