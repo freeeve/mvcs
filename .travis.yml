@@ -25,5 +25,5 @@ script:
   - go get -v ./...
   - go test -v ./...
   # start scala/anormcypher
-  - cd $HOME/scala/anormcypher
+  - cd $TRAVIS_BUILD_DIR/scala/anormcypher
   - sbt test
