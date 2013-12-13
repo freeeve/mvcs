@@ -9,6 +9,6 @@ def hello_cypher():
   query = neo4j.CypherQuery(graph_db, query_str)
   results = query.execute(screenName="wefreema")
   arr = []
-  for i,r in enumerate(results.data):
+  for r in results.data:
     arr += r
   return arr
