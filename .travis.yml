@@ -9,7 +9,8 @@ before_install:
   - tar -xzf neo4j-community-$NEO_VERSION-unix.tar.gz
   - neo4j-community-$NEO_VERSION/bin/neo4j start
   - sudo apt-get install python3
-  - sudo apt-get install python3-pip
+  - curl http://python-distribute.org/distribute_setup.py | sudo python3
+  - curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | sudo python3
 
 script:
   - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
@@ -36,7 +37,7 @@ script:
   - npm test
   # start python/py2neo
   - cd $TRAVIS_BUILD_DIR/python/py2neo/
-  - pip3 install py2neo
+  - pip3.3 install py2neo
   - python3 example_test.py
   # start scala/anormcypher
   - cd $TRAVIS_BUILD_DIR/scala/anormcypher
