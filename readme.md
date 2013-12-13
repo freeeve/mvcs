@@ -17,5 +17,7 @@ driver list - sorted alphabetically by language and then driver name:
 ### java 
 ### go
 [cq](/go/cq/)
+### node.js
+[thingdom.node-neo4j](/node.js/thingdom.node-neo4j/)
 ### scala
 [AnormCypher](/scala/anormcypher/)
