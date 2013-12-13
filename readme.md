@@ -12,8 +12,10 @@ merge (u)-[:FOLLOWS]->(n:User {screenName:"technige"});
 
 driver list - sorted alphabetically by language and then driver name:
 
-## clojure
+### clojure
 [neocons](/clojure/neocons/)
-## java 
-## go
+### java 
+### go
 [cq](/go/cq/)
+### scala
+[AnormCypher](/scala/anormcypher/)

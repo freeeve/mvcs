@@ -6,4 +6,8 @@
   "Execute some Cypher!"
   []
   (nr/connect! "http://localhost:7474/db/data/")
-  (cy/tquery "MATCH (n:User)-[:FOLLOWS]->(friend) WHERE n.screenName = {screenName} RETURN friend.screenName" {:screenName "wefreema"}))
+  (cy/tquery "MATCH (n:User)-[:FOLLOWS]->(friend) 
+              WHERE n.screenName = {screenName} 
+              RETURN friend.screenName
+              ORDER BY friend.screenName" 
+             {:screenName "wefreema"}))
