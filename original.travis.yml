@@ -1,0 +1,47 @@
+env:
+  - NEO_VERSION="2.0.0"
+
+jdk:
+  - oraclejdk7
+
+before_install:
+  - wget dist.neo4j.org/neo4j-community-$NEO_VERSION-unix.tar.gz
+  - tar -xzf neo4j-community-$NEO_VERSION-unix.tar.gz
+  - neo4j-community-$NEO_VERSION/bin/neo4j start
+  - sudo apt-get install python3
+  - curl http://python-distribute.org/distribute_setup.py | sudo python3
+  - curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | sudo python3
+
+script:
+  - neo4j-community-$NEO_VERSION/bin/neo4j-shell -file data.cyp
+  - gvm get
+  - gvm install go1.2
+  - gvm use go1.2
+  - export GOPATH=$HOME/gopath:$GOPATH
+  # start clojure/neocons
+  - cd clojure/neocons
+  - lein test
+  # start go/cq
+  - mkdir -p $HOME/gopath/src/github.com/wfreeman/mvcs/go
+  - cp -r $TRAVIS_BUILD_DIR/go/cq $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq
+  - cd $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq/
+  - go get -v ./...
+  - go test -v ./...
+  # start java/embedded
+  - cd $TRAVIS_BUILD_DIR/java/embedded/
+  - mvn clean install
+  # start node.js/thingdom.node-neo4j
+  - cd $TRAVIS_BUILD_DIR/node.js/thingdom.node-neo4j/
+  - npm install -d
+  - npm test
+  # start node.js/philippkueng.node-neo4j
+  - cd $TRAVIS_BUILD_DIR/node.js/philippkueng.node-neo4j/
+  - npm install -d
+  - npm test
+  # start python/py2neo
+  - cd $TRAVIS_BUILD_DIR/python/py2neo/
+  - sudo pip-3.2 install py2neo
+  - python3 example_test.py
+  # start scala/anormcypher
+  - cd $TRAVIS_BUILD_DIR/scala/anormcypher
+  - sbt test
