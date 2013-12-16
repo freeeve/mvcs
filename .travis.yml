@@ -22,9 +22,9 @@ script:
   - cd clojure/neocons
   - lein test
   # start go/cq
-  - mkdir -p $HOME/gopath/src/github.com/sylvainroussy/mvcs/go
-  - cp -r $TRAVIS_BUILD_DIR/go/cq $HOME/gopath/src/github.com/sylvainroussy/mvcs/go/cq
-  - cd $HOME/gopath/src/github.com/sylvainroussy/mvcs/go/cq/
+  - mkdir -p $HOME/gopath/src/github.com/wfreeman/mvcs/go
+  - cp -r $TRAVIS_BUILD_DIR/go/cq $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq
+  - cd $HOME/gopath/src/github.com/wfreeman/mvcs/go/cq/
   - go get -v ./...
   - go test -v ./...
   # start java/embedded
