@@ -1,4 +1,4 @@
-package mvcs.java.test.embedded;
+package mvcs.java.embedded.test;
 
 import static org.junit.Assert.*;
 
@@ -17,14 +17,16 @@ public class HelloCypherTest {
 	{
 		final HelloCypher hc = new HelloCypher ();
 		final List<String> results = hc.hello();
-		final String JnBrymn =  results.get(0);
-		final String technige =  results.get(1);
+		String JnBrymn = null;
+		String technige= null;
+		if (results.size() > 0)
+		{
+			JnBrymn = results.get(0);
+			technige =  results.get(1);
+		}
 		
 		assertEquals("JnBrymn", JnBrymn);
 		assertEquals("technige", technige);
 		
-		/*if res[0] != "JnBrymn" || res[1] != "technige" {
-				t.Fatal("doesn't match!", res)
-			}*/
 	}
 }
