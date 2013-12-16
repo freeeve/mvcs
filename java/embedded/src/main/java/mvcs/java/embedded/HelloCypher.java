@@ -56,29 +56,33 @@ public class HelloCypher {
 	
 	private void loadGraph ()
 	{
-		InputStream is = this.getClass().getClassLoader().getResourceAsStream(DATA_CQL_RESOURCE);
-		if (is == null)System.out.println(" Resource not found ");
-		InputStreamReader isr = new InputStreamReader(is);
-		
-		BufferedReader br = new BufferedReader(isr);
-		
-		try
+		final InputStream is = this.getClass().getClassLoader().getResourceAsStream(DATA_CQL_RESOURCE);
+		if (is == null)
 		{
-			final StringBuffer query = new StringBuffer ();
-			String line = br.readLine();			
-			while (line != null)
-			{
-				
-				query.append(line);
-				line = br.readLine();
-			}
-			
-			br.close();
-			engine.execute(query.toString());
+			System.out.println(" Resource not found ");
 		}
-		catch (IOException e)
+		else
 		{
-			e.printStackTrace();
+			final InputStreamReader isr = new InputStreamReader(is);			
+			final BufferedReader br = new BufferedReader(isr);
+			
+			try
+			{
+				final StringBuffer query = new StringBuffer ();
+				String line = br.readLine();			
+				while (line != null)
+				{					
+					query.append(line);
+					line = br.readLine();
+				}
+				
+				br.close();
+				engine.execute(query.toString());
+			}
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
 		}
 	}
 	
