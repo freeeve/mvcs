@@ -2,4 +2,7 @@
 *.py[co]
 /target
 
-./pom.xml
+pom.xml
+.settings/**
+.project
+.classpath
