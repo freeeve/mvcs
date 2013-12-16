@@ -6,7 +6,8 @@
   <dependencies>
   	<dependency>
   		<groupId>org.neo4j</groupId>
-  		<artifactId>neo4j</artifactId>
+  		<artifactId>neo4j-kernel</artifactId>
+  		 <type>test-jar</type>
   		<version>2.0.0</version>
   	</dependency>
   	<dependency>
