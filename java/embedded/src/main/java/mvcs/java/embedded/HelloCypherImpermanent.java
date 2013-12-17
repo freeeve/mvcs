@@ -11,18 +11,14 @@ import mvcs.java.commons.HelloCypherUtils;
 import org.neo4j.cypher.CypherException;
 import org.neo4j.cypher.javacompat.ExecutionEngine;
 import org.neo4j.cypher.javacompat.ExecutionResult;
+import org.neo4j.graphdb.factory.GraphDatabaseSettings;
+import org.neo4j.test.TestGraphDatabaseFactory;
 
-import org.neo4j.graphdb.factory.GraphDatabaseFactory;
-
-public class HelloCypher extends AbstractHelloCypher{
-
-	
-	
-	private static final String TEST_DB = "./test.db";
+public class HelloCypherImpermanent extends AbstractHelloCypher{
 	
 	private ExecutionEngine engine;
 
-	public HelloCypher ()
+	public HelloCypherImpermanent ()
 	{
 		super();
 		
@@ -45,9 +41,18 @@ public class HelloCypher extends AbstractHelloCypher{
 	
 	protected void buildDB ()
 	{
-		db = new GraphDatabaseFactory().newEmbeddedDatabase( TEST_DB );
+		
+		 db = new TestGraphDatabaseFactory()
+		    .newImpermanentDatabaseBuilder()
+		    .setConfig(GraphDatabaseSettings.nodestore_mapped_memory_size,"10M" )
+		    .setConfig(GraphDatabaseSettings.string_block_size,"60" )
+		    .setConfig(GraphDatabaseSettings.array_block_size,"300" )
+		    .newGraphDatabase();
+		
+		
 		Runtime.getRuntime().addShutdownHook(new Thread (){public void run (){db.shutdown();}});
 		engine = new ExecutionEngine( db );	
+		
 		HelloCypherUtils.loadGraph(engine);
 	}
 	

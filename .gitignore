@@ -1,2 +1,8 @@
 *~
 *.py[co]
+/target
+
+pom.xml
+.settings/**
+.project
+.classpath
