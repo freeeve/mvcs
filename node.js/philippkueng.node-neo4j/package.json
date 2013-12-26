@@ -1,6 +1,6 @@
 {
     "name": "philippkeung.node-neo4j-example",
-    "version": "2.0.0-RC1",
+    "version": "2.0.0-RC2",
     "main": "example.js",
     "dependencies": {
         "node-neo4j": "2.0.0-RC2"
