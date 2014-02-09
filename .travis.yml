@@ -6,6 +6,9 @@ jdk:
 
 python:
   - "3.3"
+  
+scala:
+  - "2.10.3"
 
 before_install:
   - wget dist.neo4j.org/neo4j-community-$NEO_VERSION-unix.tar.gz
