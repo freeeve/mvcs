@@ -1,5 +1,7 @@
-env:
-  - NEO_VERSION="2.0.0"
+matrix:
+  env:
+    - NEO_VERSION="2.0.0"
+    - NEO_VERSION="2.0.1"
 
 jdk:
   - oraclejdk7
