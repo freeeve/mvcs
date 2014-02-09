@@ -8,12 +8,12 @@
   		<groupId>org.neo4j</groupId>
   		<artifactId>neo4j-kernel</artifactId>
   		 <type>test-jar</type>
-  		<version>${env.NEO4J_VERSION}</version>
+  		<version>${env.NEO_VERSION}</version>
   	</dependency>
   	<dependency>
   		<groupId>org.neo4j</groupId>
   		<artifactId>neo4j-cypher</artifactId>
-  		<version>${env.NEO4J_VERSION}</version>
+  		<version>${env.NEO_VERSION}</version>
   	</dependency>
   	<dependency>
   		<groupId>junit</groupId>
