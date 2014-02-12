@@ -3,7 +3,7 @@
     "version": "2.0.0-RC2",
     "main": "example.js",
     "dependencies": {
-        "node-neo4j": "2.0.0-RC3"
+        "node-neo4j": "2.0.0-RC5"
     },
     "devDependencies": {
         "mocha": "~1.3"
